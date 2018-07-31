@@ -8,10 +8,15 @@ package com.singtel.test;
 import com.singtel.behaviors.impl.SingingImpl;
 import com.singtel.behaviors.impl.FlyingImpl;
 import com.singtel.behaviors.impl.SwimmingImpl;
+import com.singtel.model.Animal;
 import com.singtel.model.Bird;
 import com.singtel.model.Chicken;
+import com.singtel.model.ClownFish;
+import com.singtel.model.Dolphin;
 import com.singtel.model.Duck;
+import com.singtel.model.Fish;
 import com.singtel.model.Parrot;
+import com.singtel.model.Shark;
 
 /**
  *
@@ -62,6 +67,27 @@ public class SolutionTest {
         System.out.println("Parret 1 is acting now");
         parrot.doSinging();
         
+        //Section B Modelling Fish, Shark, Clownfish and Dolphin
+        System.out.println("Shark is swimming now");
+        Fish shark = new Shark("Large", "Gray", false, true);
+        shark.setSwimmingBehavior(new SwimmingImpl(true));
+        shark.doFlying();
+        shark.doSinging();
+        shark.doSwimming();
+        
+        System.out.println("Clownfish is swimming now");
+        Fish clownFish = new ClownFish("Small", "orange", true, false);
+        clownFish.setSwimmingBehavior(new SwimmingImpl(true));
+        clownFish.doFlying();
+        clownFish.doSinging();
+        clownFish.doSwimming();
+        
+        System.out.println("Dolphin is swimming now");
+        Animal dolphin = new Dolphin();
+        dolphin.setSwimmingBehavior(new SwimmingImpl(true));
+        dolphin.doFlying();
+        dolphin.doSinging();
+        dolphin.doSwimming();
     }
 
 }
