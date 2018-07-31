@@ -61,3 +61,6 @@ lives near a Duck? Or near a phone that rings frequently?
 # Solution 4
 Added a companion Animal object to base class and injected its singing behavior 
 for the parrot.
+
+# Section B
+Points 1,2 & 3 are covered in one commit. The design is very flexible to accomodate the requirements.
