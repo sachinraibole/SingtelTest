@@ -11,6 +11,7 @@ import com.singtel.behaviors.impl.SwimmingImpl;
 import com.singtel.model.Bird;
 import com.singtel.model.Chicken;
 import com.singtel.model.Duck;
+import com.singtel.model.Parrot;
 
 /**
  *
@@ -52,7 +53,15 @@ public class SolutionTest {
         rooster.doFlying();
         rooster.doSinging();
         rooster.doSwimming();
-
+        
+        //Solution 4
+        //We are injecting the roosters singing behavior in the parrot
+        Bird parrot = new Parrot();
+        parrot.setCompanion(rooster);
+        parrot.setSingingBehavior(rooster.getSingingBehavior());
+        System.out.println("Parret 1 is acting now");
+        parrot.doSinging();
+        
     }
 
 }

@@ -5,68 +5,17 @@
  */
 package com.singtel.model;
 
-import com.singtel.behaviors.FlyingBehavior;
-import com.singtel.behaviors.SingingBehavior;
-import com.singtel.behaviors.SwimmingBehavior;
-import com.singtel.behaviors.impl.FlyingImpl;
-import com.singtel.behaviors.impl.SwimmingImpl;
-import com.singtel.behaviors.impl.SingingImpl;
-
 /**
  *
  * @author sraibole
  */
-public abstract class Bird extends Animal{
-    // DESIGN PRINCIPAL - Program to an interface, not an implementation.
-    // DESIGN PRINCIPAL - Favor composition over inheritance.
-    private FlyingBehavior flyingBehavior;
-    private SingingBehavior singingBehavior;
-    private SwimmingBehavior swimmingBehavior;
-   
+public abstract class Bird extends Animal {
 
     // The behaviors can be injected at runtime. Keeping it simple in this solution.
     public Bird() {
-        this.flyingBehavior = new FlyingImpl(false);
-        this.singingBehavior = new SingingImpl(false,null,null);
-        this.swimmingBehavior = new SwimmingImpl(false);
+        super();
     }
 
-    public FlyingBehavior getFlyingBehavior() {
-        return flyingBehavior;
-    }
-
-    public void setFlyingBehavior(FlyingBehavior flyingBehavior) {
-        this.flyingBehavior = flyingBehavior;
-    }
-
-    public SingingBehavior getSingingBehavior() {
-        return singingBehavior;
-    }
-
-    public void setSingingBehavior(SingingBehavior singingBehavior) {
-        this.singingBehavior = singingBehavior;
-    }
-
-    public SwimmingBehavior getSwimmingBehavior() {
-        return swimmingBehavior;
-    }
-
-    public void setSwimmingBehavior(SwimmingBehavior swimmingBehavior) {
-        this.swimmingBehavior = swimmingBehavior;
-    }
-    
-    public void doFlying(){
-        flyingBehavior.fly();
-    }
-    
-    public void doSinging(){
-        singingBehavior.sing();
-    }
-    
-     public void doSwimming(){
-        swimmingBehavior.swim();
-    }
-    
 //  OLD CODE       
 //    public void fly(){
 //        System.out.println("I am flying");
