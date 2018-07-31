@@ -18,7 +18,8 @@ public abstract class AbstractFlyingBehavior implements FlyingBehavior{
     }
     
     private boolean canFly;
-
+    
+    @Override
     public boolean isCanFly() {
         return canFly;
     }

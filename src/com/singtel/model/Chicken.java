@@ -10,5 +10,7 @@ package com.singtel.model;
  * @author sachinraibole
  */
 public class Chicken extends Bird{
-    
+    public Chicken() {
+        super();
+    }
 }

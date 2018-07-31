@@ -24,7 +24,8 @@ public class AbstractSingingBehavior implements SingingBehavior {
         this.sex = sex;
         this.melody = melody;
     }
-
+    
+    @Override
     public boolean isCanSing() {
         return canSing;
     }

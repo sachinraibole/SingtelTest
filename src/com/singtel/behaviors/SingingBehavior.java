@@ -10,6 +10,7 @@ package com.singtel.behaviors;
  * @author sraibole
  */
 public interface SingingBehavior {
+    boolean isCanSing();
     void sing();
     void canSing(boolean canSing);
 }

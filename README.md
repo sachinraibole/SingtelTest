@@ -69,3 +69,6 @@ accommodate the requirements.
 # Section D
 Points 1,2 are covered in one commit. The design is very flexible to 
 accommodate the requirements.
+
+# Section E Counting animals.
+Used Streams and Lamda expressions to filter the arraylist. 

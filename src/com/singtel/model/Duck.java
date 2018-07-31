@@ -10,5 +10,9 @@ package com.singtel.model;
  * @author sachinraibole
  */
 public class Duck extends Bird{
+
+    public Duck() {
+        super();
+    }
     
 }

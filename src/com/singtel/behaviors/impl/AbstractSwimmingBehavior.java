@@ -19,6 +19,7 @@ public class AbstractSwimmingBehavior implements SwimmingBehavior {
 
     private boolean canSwim;
 
+    @Override
     public boolean isCanSwim() {
         return canSwim;
     }
@@ -29,7 +30,12 @@ public class AbstractSwimmingBehavior implements SwimmingBehavior {
 
     @Override
     public void swim() {
-        System.out.println("I can swim");
+        if (isCanSwim()) {
+            System.out.println("I can swim");
+        } else {
+            System.out.println("I Cannot swim");
+        }
+
     }
 
     @Override

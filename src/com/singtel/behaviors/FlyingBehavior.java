@@ -10,6 +10,7 @@ package com.singtel.behaviors;
  * @author sraibole
  */
 public interface FlyingBehavior {
+    boolean isCanFly();
     void fly();
     void canFly(boolean canFly);
 }
