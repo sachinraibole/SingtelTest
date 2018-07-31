@@ -11,4 +11,5 @@ package com.singtel.behaviors;
  */
 public interface SingingBehavior {
     void sing();
+    void canSing(boolean canSing);
 }

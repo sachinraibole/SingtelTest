@@ -5,17 +5,12 @@
  */
 package com.singtel.behaviors.impl;
 
-import com.singtel.behaviors.SingingBehavior;
-
 /**
  *
  * @author sachinraibole
  */
-public class CluckSinging implements SingingBehavior{
-
-    @Override
-    public void sing() {
-        System.out.println("I say Cluck Cluck !!!!");
+public class SwimmingImpl extends AbstractSwimmingBehavior{
+    public SwimmingImpl(boolean canSwim) {
+        super(canSwim);
     }
-    
 }

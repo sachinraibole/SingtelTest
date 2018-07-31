@@ -5,17 +5,14 @@
  */
 package com.singtel.behaviors.impl;
 
-import com.singtel.behaviors.SingingBehavior;
-
 /**
  *
  * @author sachinraibole
  */
-public class QuackSinging implements SingingBehavior{
+public class SingingImpl extends AbstractSingingBehavior {
 
-    @Override
-    public void sing() {
-        System.out.println("I say quack quack !!!!");
+    public SingingImpl(boolean canSing, String sex, String melody) {
+        super(canSing, sex, melody);
     }
-    
+
 }

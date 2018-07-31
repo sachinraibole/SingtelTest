@@ -8,9 +8,9 @@ package com.singtel.model;
 import com.singtel.behaviors.FlyingBehavior;
 import com.singtel.behaviors.SingingBehavior;
 import com.singtel.behaviors.SwimmingBehavior;
-import com.singtel.behaviors.impl.NoFlying;
-import com.singtel.behaviors.impl.NoSinging;
-import com.singtel.behaviors.impl.NoSwimming;
+import com.singtel.behaviors.impl.FlyingImpl;
+import com.singtel.behaviors.impl.SwimmingImpl;
+import com.singtel.behaviors.impl.SingingImpl;
 
 /**
  *
@@ -22,12 +22,13 @@ public abstract class Bird extends Animal{
     private FlyingBehavior flyingBehavior;
     private SingingBehavior singingBehavior;
     private SwimmingBehavior swimmingBehavior;
+   
 
     // The behaviors can be injected at runtime. Keeping it simple in this solution.
     public Bird() {
-        this.flyingBehavior = new NoFlying();
-        this.singingBehavior = new NoSinging();
-        this.swimmingBehavior = new NoSwimming();
+        this.flyingBehavior = new FlyingImpl(false);
+        this.singingBehavior = new SingingImpl(false,null,null);
+        this.swimmingBehavior = new SwimmingImpl(false);
     }
 
     public FlyingBehavior getFlyingBehavior() {

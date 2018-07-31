@@ -11,4 +11,5 @@ package com.singtel.behaviors;
  */
 public interface FlyingBehavior {
     void fly();
+    void canFly(boolean canFly);
 }

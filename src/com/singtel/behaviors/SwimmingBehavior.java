@@ -11,4 +11,5 @@ package com.singtel.behaviors;
  */
 public interface SwimmingBehavior {
     void swim();
+    void canSwim(boolean canSwim);
 }

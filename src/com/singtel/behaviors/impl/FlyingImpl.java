@@ -5,17 +5,12 @@
  */
 package com.singtel.behaviors.impl;
 
-import com.singtel.behaviors.SingingBehavior;
-
 /**
  *
  * @author sraibole
  */
-public class SweetSinging implements SingingBehavior{
-
-    @Override
-    public void sing() {
-        System.out.println("I am singing very sweetly");
+public class FlyingImpl extends AbstractFlyingBehavior{
+    public FlyingImpl(boolean canFly) {
+        super(canFly);
     }
-    
 }

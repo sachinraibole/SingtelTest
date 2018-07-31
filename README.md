@@ -34,3 +34,16 @@ d. A chicken cannot fly (assumption: its wings are clipped but ignore that)
 
 As we had used a flexible approach of using a Strategy design pattern
 we just had to implement a behavior for Quacking and Clucking
+
+# Problem 3
+
+3. Now how would you model a rooster?
+a. A rooster says: “Cock-a-doodle-doo”
+b. How is the rooster related to the chicken?
+c. Can you think of other ways to model a rooster without using inheritance?
+
+# Solution 3
+Did some cleanup of classes. Added abstract class to move the redundant code.
+Used class level attributes to store properties of the object. The sex attribute 
+is added to determine if the bird is a rooster.
+
