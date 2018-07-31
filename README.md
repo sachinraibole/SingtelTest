@@ -1,5 +1,5 @@
 # This is a Netbeans 8.2 project. 
-# Open the project and run Solution01.java
+# Open the project and run SolutionTest.java
 
 # Problem 1
 1. Can you implement the sing() method for the bird?
