@@ -7,23 +7,27 @@ package com.singtel.model;
 
 import com.singtel.behaviors.FlyingBehavior;
 import com.singtel.behaviors.SingingBehavior;
-import com.singtel.behaviors.impl.SkyHighFlying;
-import com.singtel.behaviors.impl.SweetSinging;
+import com.singtel.behaviors.SwimmingBehavior;
+import com.singtel.behaviors.impl.NoFlying;
+import com.singtel.behaviors.impl.NoSinging;
+import com.singtel.behaviors.impl.NoSwimming;
 
 /**
  *
  * @author sraibole
  */
-public class Bird extends Animal{
+public abstract class Bird extends Animal{
     // DESIGN PRINCIPAL - Program to an interface, not an implementation.
     // DESIGN PRINCIPAL - Favor composition over inheritance.
     private FlyingBehavior flyingBehavior;
     private SingingBehavior singingBehavior;
+    private SwimmingBehavior swimmingBehavior;
 
     // The behaviors can be injected at runtime. Keeping it simple in this solution.
     public Bird() {
-        this.flyingBehavior = new SkyHighFlying();
-        this.singingBehavior = new SweetSinging();
+        this.flyingBehavior = new NoFlying();
+        this.singingBehavior = new NoSinging();
+        this.swimmingBehavior = new NoSwimming();
     }
 
     public FlyingBehavior getFlyingBehavior() {
@@ -41,6 +45,14 @@ public class Bird extends Animal{
     public void setSingingBehavior(SingingBehavior singingBehavior) {
         this.singingBehavior = singingBehavior;
     }
+
+    public SwimmingBehavior getSwimmingBehavior() {
+        return swimmingBehavior;
+    }
+
+    public void setSwimmingBehavior(SwimmingBehavior swimmingBehavior) {
+        this.swimmingBehavior = swimmingBehavior;
+    }
     
     public void doFlying(){
         flyingBehavior.fly();
@@ -48,6 +60,10 @@ public class Bird extends Animal{
     
     public void doSinging(){
         singingBehavior.sing();
+    }
+    
+     public void doSwimming(){
+        swimmingBehavior.swim();
     }
     
 //  OLD CODE       

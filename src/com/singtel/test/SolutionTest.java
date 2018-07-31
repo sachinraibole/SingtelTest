@@ -5,7 +5,14 @@
  */
 package com.singtel.test;
 
+import com.singtel.behaviors.impl.CluckSinging;
+import com.singtel.behaviors.impl.LakeSwimming;
+import com.singtel.behaviors.impl.LowFlying;
+import com.singtel.behaviors.impl.NoFlying;
+import com.singtel.behaviors.impl.QuackSinging;
 import com.singtel.model.Bird;
+import com.singtel.model.Chicken;
+import com.singtel.model.Duck;
 
 /**
  *
@@ -17,14 +24,28 @@ public class SolutionTest {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
-        Bird bird = new Bird();
-        // Did not move walk to a behavior, but this is a candidate which also can vary as per the implementation and so can be extracted out.
-        bird.walk(); 
-        // In the below code the behaviors injected into the Bird encapsulate 
-        // the behavior and is interchangeable at runtime.
-        bird.doFlying();
-        bird.doSinging();
+        //We have now made Bird a abstract class.
+        //Duck can fly and swim and says Quack, quack. 
+        //Assumption is it cannot swim either.
+        Bird duck = new Duck(); // programming to interface
+        duck.setSingingBehavior(new QuackSinging());
+        duck.setSwimmingBehavior(new LakeSwimming());
+        duck.setFlyingBehavior(new LowFlying());
+        System.out.println("Duck is acting now ");
+        duck.doFlying();
+        duck.doSinging();
+        duck.doSwimming();
+        
+        //Chicken cannot fly and says Cluck, cluck. 
+        //Assumption is it cannot swim either.
+        Bird chicken = new Chicken();
+        chicken.setSingingBehavior(new CluckSinging());
+        chicken.setFlyingBehavior(new NoFlying());
+        System.out.println("Chicken is acting now");
+        chicken.doFlying();
+        chicken.doSinging();
+        chicken.doSwimming();
+        
     }
     
 }

@@ -20,3 +20,17 @@ So we would have to apply some design principals and make the code more maintain
 The details of the design principles are mentioned in the code inline.
 
 I would be using Strategy Design pattern to implement the solution.
+
+# Problem 2
+
+2. Now, we have 2 special kinds of birds: the Duck and the Chicken... 
+Can you implement them to make their own special sound?
+a. A duck says: “Quack, quack”
+b. A duck can swim
+c. A chicken says: “Cluck, cluck”
+d. A chicken cannot fly (assumption: its wings are clipped but ignore that)
+
+# Solution 2
+
+As we had used a flexible approach of using a Strategy design pattern
+we just had to implement a behavior for Quacking and Clucking
