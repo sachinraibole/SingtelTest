@@ -10,6 +10,7 @@ import com.singtel.behaviors.impl.FlyingImpl;
 import com.singtel.behaviors.impl.SwimmingImpl;
 import com.singtel.model.Animal;
 import com.singtel.model.Bird;
+import com.singtel.model.Butterfly;
 import com.singtel.model.Chicken;
 import com.singtel.model.ClownFish;
 import com.singtel.model.Dolphin;
@@ -88,6 +89,16 @@ public class SolutionTest {
         dolphin.doFlying();
         dolphin.doSinging();
         dolphin.doSwimming();
+        
+        //Section D - 1,2
+        System.out.println("Butterfly born as a caterpillar");
+        Butterfly butterfly= new Butterfly("caterpillar");
+        butterfly.injectBehaviorBasedOnStageOfLife();
+        butterfly.doFlying();
+        System.out.println("Butterfly grown to a buttefly which can fly");
+        butterfly.setStageOfLife("butterfly");
+        butterfly.injectBehaviorBasedOnStageOfLife();
+        butterfly.doFlying();
     }
 
 }

@@ -63,4 +63,9 @@ Added a companion Animal object to base class and injected its singing behavior
 for the parrot.
 
 # Section B
-Points 1,2 & 3 are covered in one commit. The design is very flexible to accomodate the requirements.
+Points 1,2 & 3 are covered in one commit. The design is very flexible to 
+accommodate the requirements.
+
+# Section D
+Points 1,2 are covered in one commit. The design is very flexible to 
+accommodate the requirements.
